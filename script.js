@@ -33,7 +33,6 @@ function findPokemon () {
       fetch(url)
           .then(function(response) {
             if (!response.ok) {
-              window.alert("pokemon no econtrado")
               throw Error(response.statusText);
             }
             return response.json();
