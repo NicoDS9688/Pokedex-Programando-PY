@@ -22,7 +22,7 @@ const translations = {
 function enterPokemon(event) {
     if (event.keyCode === 13) {
       findPokemon();
-    }
+    } 
   }
 
 function findPokemon () {
@@ -52,6 +52,9 @@ let pokemonCount= 0;
     const showPokemon = (pokemon) => {
       if (pokemonCount < 6) {
         pokemonCount++;
+        if(pokemonCount === 6){
+          window.alert('Llegaste al maximo de POKEMONES')
+        }
         console.log(pokemon)
         
         const flex = document.querySelector('.flex');
